@@ -135,6 +135,10 @@ def main():
                               help='Docker Registry from which to pull images',
                               default=defaults['DEFAULT_REGISTRY'],
                               metavar='url')
+    start_parser.add_argument('--is-mac',
+                              help='If Clustedock should run configuration for Mac computers',
+                              default=defaults['DEFAULT_IS_MAC'],
+                              metavar='mac')
     start_parser.add_argument('topology',
                               help='A clusterdock topology directory')
 

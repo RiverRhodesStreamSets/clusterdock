@@ -449,7 +449,7 @@ class Node:
                                timeout=30, success=success, failure=failure)
 
         # Add Docker container info to /etc/hosts on non-Mac instances to enable SOCKS5 proxy usage.
-        if sys.platform != 'darwin':
+        if sys.platform != 'darwin' && !create_container_kwargs['isMac']:
             self._add_node_to_etc_hosts()
 
     def stop(self, remove=True):
